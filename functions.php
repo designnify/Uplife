@@ -29,5 +29,5 @@ add_theme_support( 'genesis-responsive-viewport' );
 //* Add support for custom background
 add_theme_support( 'custom-background' );
 
-//* Add support for 3-column footer widgets
-add_theme_support( 'genesis-footer-widgets', 3 );
+//* Add support for 1-column footer widgets
+add_theme_support( 'genesis-footer-widgets', 1 );
