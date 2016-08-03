@@ -1,9 +1,9 @@
 .site-header {
 	background-color: #fff;
-	min-height: 160px;
+	height: 60px;
 
 	.wrap {
-		padding: 40px 0;
+		padding: 0;
 	}
 }
 
@@ -12,8 +12,9 @@
 
 .title-area {
 	float: left;
-	padding: 10px 0;
-	width: 360px;
+	padding: 0;
+	position: absolute;
+	width: 120px;
 }
 
 .header-full-width {
@@ -34,9 +35,10 @@
 }
 
 .header-image .site-title > a {
-	background: url(images/logo.png) no-repeat left;
+	background: url(images/uplife-logo.png) no-repeat left;
+	background-size: 120px 119px;
 	float: left;
-	min-height: 60px;
+	height: 120px;
 	width: 100%;
 }
 
@@ -66,6 +68,6 @@
 	.widget-area {
 		float: right;
 		text-align: right;
-		width: 740px;
+		width: 820px;
 	}
 }

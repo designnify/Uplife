@@ -33,23 +33,67 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/js\/project.js": {
-		"fileType": 64,
+	"\/images\/uplife-logo.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/project.js",
-		"outputAbbreviatedPath": "\/js\/min\/project-min.js",
+		"initialSize": 72962,
+		"inputAbbreviatedPath": "\/images\/uplife-logo.png",
+		"outputAbbreviatedPath": "\/images\/uplife-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/js\/global-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/global-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/global-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/project.min.js": {
+	"\/js\/global.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/project.min.js",
-		"outputAbbreviatedPath": "\/js\/min\/project.min-min.js",
+		"inputAbbreviatedPath": "\/js\/global.js",
+		"outputAbbreviatedPath": "\/js\/global-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/partials\/home.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/partials\/home.js",
+		"outputAbbreviatedPath": "\/js\/partials\/min\/home-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/partials\/jquery.localScroll.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/partials\/jquery.localScroll.min.js",
+		"outputAbbreviatedPath": "\/js\/partials\/min\/jquery.localScroll.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/partials\/jquery.scrollTo.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/partials\/jquery.scrollTo.min.js",
+		"outputAbbreviatedPath": "\/js\/partials\/min\/jquery.scrollTo.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -350,7 +394,7 @@
 		},
 	"\/sass\/style.scss": {
 		"createSourceMap": 0,
-		"debugStyle": 0,
+		"debugStyle": 1,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 0,
@@ -389,6 +433,26 @@
 	],
 "lastSavedByUser": "Maurcio Alvarez Rojano",
 "manualImportLinks": {
+	"\/js\/global.js": [
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/partials\/jquery.scrollTo.min.js",
+			"position": 0,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/partials\/jquery.localScroll.min.js",
+			"position": 1,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/partials\/home.js",
+			"position": 2,
+			"type": 0
+			}
+		]
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",

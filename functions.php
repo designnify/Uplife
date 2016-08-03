@@ -3,20 +3,23 @@
 include_once( get_template_directory() . '/lib/init.php' );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'Genesis Sample Theme' );
-define( 'CHILD_THEME_URL', 'http://www.studiopress.com/' );
-define( 'CHILD_THEME_VERSION', '2.1.2' );
+define( 'CHILD_THEME_NAME', 'Uplife Theme' );
+define( 'CHILD_THEME_URL', 'http://designnify.com/' );
+define( 'CHILD_THEME_VERSION', '1.0' );
 
 //* Enqueue Styles and Scripts
-add_action( 'wp_enqueue_scripts', 'genesis_sample_scripts' );
-function genesis_sample_scripts() {
+add_action( 'wp_enqueue_scripts', 'uplife_theme_scripts' );
+function uplife_theme_scripts() {
 
 	//* Add Google Fonts
-	wp_register_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700', array(), CHILD_THEME_VERSION );
+	wp_register_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:400,700,300', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'google-fonts' );
 
 	//* Add compiled JS
-	wp_enqueue_script( 'genesis-sample-scripts', get_stylesheet_directory_uri() . '/js/project' . $minnified . '.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'uplife-theme-scripts', get_bloginfo( 'stylesheet_directory' ) . '/js/global.js', array( 'jquery' ), '1.0.0' );
+	
+	//* Add Dashicon
+	wp_enqueue_style( 'dashicons' );
 
 }
 

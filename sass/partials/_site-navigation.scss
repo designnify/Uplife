@@ -1,6 +1,7 @@
 .genesis-nav-menu {
 	clear: both;
 	font-size: 16px;
+	height: 60px;
 	line-height: 1;
 	width: 100%;
 
@@ -13,13 +14,17 @@
 	a {
 		color: #333;
 		display: block;
-		padding: 30px 24px;
+		font-family: $font-sans;
+		height: 60px;
+		padding: 20px 6px 10px;
+		text-transform: uppercase;
 	}
 
 	a:hover,
 	.current-menu-item > a,
 	.sub-menu .current-menu-item > a:hover {
-		color: #e5554e;
+		background: $color-purple;
+		color: #fff;
 	}
 
 	.sub-menu {
