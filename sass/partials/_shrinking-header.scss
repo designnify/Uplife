@@ -1,0 +1,118 @@
+/* Shrinking Header
+--------------------------------------------- */
+
+.site-header {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+
+.title-area {
+	padding-bottom: 0;
+}
+
+.site-header .wrap,
+.bumper {
+	height: 120px;
+}
+
+.site-header,
+.site-header .wrap,
+.site-description {
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition:    all 0.4s ease-in-out;
+	transition:         all 0.4s ease-in-out;
+}
+
+/* Shrink
+--------------------------------------------- */
+
+.site-header.shrink {
+	background: rgba(255, 255, 255, 0.5);
+	border-bottom: 1px solid #ddd;
+	height: 60px;
+	
+	.title-area {
+		width: 80px;
+	}
+	
+	.genesis-nav-menu {
+		height: 60px;
+		
+		a {
+			height: 60px;
+			padding: 20px 6px 10px;
+		}
+	}
+}
+
+.shrink .wrap {
+	background-color: rgba(255, 255, 255, 0.1);
+	height: 80px;
+	padding: 0;
+}
+
+.shrink .site-title {
+	font-size: 20px;
+	padding-top: 3px;
+}
+
+.header-image .shrink .site-title {
+	padding: 0;
+}
+
+.header-image .shrink .site-title > a {
+	height: 80px;
+}
+
+.shrink .site-title a {
+	background-size: 80px 80px !important;
+}
+
+.site-header.shrink .widget-area {
+	padding-top: 0;
+}
+
+@media only screen and (max-width: 1023px) {
+
+	.title-area {
+		width: 100%;
+	}
+
+	.site-header .wrap, .bumper {
+		min-height: 172px;
+	}
+
+	.site-header.shrink .wrap {
+		min-height: 60px;
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+
+	.shrink .site-title {
+		font-size: 24px;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+
+	.site-header {
+		top: 0;
+	}
+
+	.site-header .wrap, .bumper {
+		min-height: 130px;
+	}
+
+}
+
+@media only screen and (max-width: 320px) {
+
+	.site-header .wrap, .bumper {
+		min-height: 190px;
+	}
+
+}

@@ -37,6 +37,9 @@
 		- Titles
 	- Widgets
 		- Featured Content
+	- Home Page & Home Page Widgets
+		- Home Page Top
+		- News & Blog
 	- Plugins
 		- Genesis eNews Extended
 		- Genesis Latest Tweets
@@ -45,6 +48,8 @@
 	- Site Header
 		- Title Area
 		- Widget Area
+		- Shrinking Header
+		- Shrink
 	- Site Navigation
 		- Header Navigation
 		- Primary Navigation
@@ -97,6 +102,12 @@ Widgets
 
 
 /*
+Home Page & Home Page Widgets
+---------------------------------------------------------------------------------------------------- */
+@import "partials/home-page-widgets";
+
+
+/*
 Plugins
 ---------------------------------------------------------------------------------------------------- */
 @import "partials/plugins";
@@ -116,6 +127,7 @@ Plugins
 Site Header
 ---------------------------------------------------------------------------------------------------- */
 @import "partials/site-header";
+@import "partials/shrinking-header";
 
 
 /*
