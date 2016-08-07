@@ -3,12 +3,11 @@
 
 .entry {
 	margin-bottom: 40px;
-	padding: 50px 60px;
+	padding: 0 60px;
 }
 
 .content .entry {
 	background-color: #fff;
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 .entry-content {
@@ -34,6 +33,24 @@
 	code {
 		background-color: #000;
 		color: #ddd;
+	}
+	
+	p.read-more-wrap:last-child {
+		margin-bottom: 0;
+		float: right;
+	}
+	
+	.read-more {
+		background: $color-purple;
+		border: 2px solid $color-purple;
+		color: #fff;
+		display: inline-block;
+		padding: 5px 15px;
+		
+		&:hover {
+			background: #fff;
+			color: $color-purple;
+		}
 	}
 }
 

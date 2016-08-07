@@ -1,6 +1,6 @@
 .home {
 	.site-inner {
-		padding-top: 0;
+		padding: 0;
 		max-width: 100%;
 	}
 }
@@ -37,17 +37,103 @@
 /* News & Blog
 --------------------------------------------- */
 #news-blog {
-	padding: 30px 0 10px;
+	padding: 40px 0 0;
 	
 	.widget-title {
 		font-size: 35px;
+	}
+	
+	.featured-content .entry.category-uutiset,
+	.featured-content .entry.category-news {
+		float: left;
+		margin-right: 10px;
+		width: 32%;
+	}
+	
+	.featured-content .entry.category-uutiset,
+	.featured-content .entry.category-news {
+		
+		.entry-header {
+			background: $color-dark-purple;
+			border: 2px solid $color-dark-purple;
+			margin-top: -8px;
+			padding: 5px;
+			-webkit-transition: all 0.1s ease-in-out;
+		    -moz-transition: all 0.1s ease-in-out;
+		    -ms-transition: all 0.1s ease-in-out;
+		    -o-transition: all 0.1s ease-in-out;
+		    transition: all 0.1s ease-in-out;
+		    
+		    a {
+				color: #fff;
+			}
+		}
+	}
+	
+	.featured-content .entry {
+		
+		.entry-content {
+			padding: 5px;
+		}
+		
+		.more-link {
+			background: $color-purple;
+			border: 2px solid $color-purple;
+			color: #fff;
+			display: block;
+			padding: 5px;
+			width: 70%;
+			
+			&:hover {
+				background: #fff;
+				color: $color-purple;
+			}
+		}
 	}
 }
 
 /* Home Page Bottom
 --------------------------------------------- */
 #homepage-bottom {
+	padding: 0 0 30px;
+	
 	.widget-title {
 		font-size: 25px;
+	}
+	
+	.enews {
+		
+		h5, p {
+			text-align: center;
+		}
+		
+		h5 {
+			font-size: 24px;
+		}
+		
+		form {
+			background: #232525;
+			padding: 10px 10px 0;
+			
+			input {
+				width: 75%;
+			}
+			
+			input[type="submit"] {
+				border-radius: 50%;
+				float: right;
+				height: 120px;
+				width: 120px;
+			}
+		}
+	}
+	
+	table.events-table {
+		line-height: 1.2;
+		margin-bottom: 0;
+		
+		td {
+			padding: 0;
+		}
 	}
 }
