@@ -32,6 +32,20 @@ add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list'
 //* Add viewport meta tag for mobile browsers
 add_theme_support( 'genesis-responsive-viewport' );
 
+//* Unregister the header right widget area
+unregister_sidebar( 'header-right' );
+
+//* Reposition the primary navigation menu
+remove_action( 'genesis_after_header', 'genesis_do_nav' );
+add_action( 'genesis_header', 'genesis_do_nav', 12 );
+
+//* Remove output of primary navigation right extras
+remove_filter( 'genesis_nav_items', 'genesis_nav_right', 10, 2 );
+remove_filter( 'wp_nav_menu_items', 'genesis_nav_right', 10, 2 );
+
+//* Remove secondary navigation menu
+add_theme_support( 'genesis-menus', array( 'primary' => __( 'Primary Navigation Menu', 'genesis' ) ) );
+
 //* Enable shortcodes in widgets
 add_filter('widget_text', 'do_shortcode');
 
@@ -65,7 +79,12 @@ remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_close', 15 )
 add_filter('excerpt_more', 'get_read_more_link');
 add_filter( 'the_content_more_link', 'get_read_more_link' );
 function get_read_more_link() {
-   return '...&nbsp;<p class="read-more-wrap"><a href="' . get_permalink() . '" class="read-more">[Read More]</a></p>';
+	if (get_locale() == 'en_GB') {
+		return '...&nbsp;<p class="read-more-wrap"><a href="' . get_permalink() . '" class="read-more">Read More  ►</a></p>';
+	}
+	else {
+		return '...&nbsp;<p class="read-more-wrap"><a href="' . get_permalink() . '" class="read-more">Jatka lukemista  ►</a></p>';
+	}
 }
 
 //* Display Featured Image on top of the post

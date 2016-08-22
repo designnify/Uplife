@@ -186,3 +186,10 @@ li.comment {
 	font-size: 16px;
 	padding: 24px;
 }
+
+/* Blog Page Specific*/
+.page-template-page_blog {
+	.entry-content {
+		border-bottom: 1px dotted $color-purple;
+	}
+}

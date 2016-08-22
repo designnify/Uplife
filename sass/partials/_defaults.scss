@@ -5,7 +5,7 @@ body {
 	background-color: $color-site-bg;
 	color: $color-font;
 	font-family: $font-sans;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 300;
 	line-height: 1.625;
 	margin: 0;
@@ -162,7 +162,7 @@ textarea {
 	color: #000;
 	font-size: 18px;
 	font-weight: 300;
-	padding: 16px;
+	padding: 7px;
 	width: 100%;
 }
 
@@ -194,7 +194,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-	background-color: #000;
+	background-color: $color-purple;
 	border: 0;
 	color: #fff;
 	cursor: pointer;
@@ -221,7 +221,7 @@ input:hover[type="button"],
 input:hover[type="reset"],
 input:hover[type="submit"],
 .button:hover {
-	background-color: #e5554e;
+	background-color: $color-dark-purple;
 	color: #fff;
 }
 
@@ -276,4 +276,13 @@ td {
 
 th {
 	font-weight: 400;
+}
+
+
+/* Contact Form 7
+--------------------------------------------- */
+.wpcf7 {
+	p {
+		margin: 0 0 15px;
+	}
 }

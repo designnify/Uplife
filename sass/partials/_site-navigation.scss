@@ -114,26 +114,21 @@
 --------------------------------------------- */
 
 .nav-primary {
-	background-color: #333;
-
-	a {
-		color: #fff;
-	}
-
-	.sub-menu a {
-		color: #333;
-	}
-
-	a:hover,
-	.current-menu-item > a,
-	.sub-menu .current-menu-item > a:hover {
-		color: #e5554e;
-	}
+	float: right;
 }
 
-/* Secondary Navigation
+/* Responsive Menu
 --------------------------------------------- */
 
-.nav-secondary {
-	background-color: #fff;
+.responsive-menu-icon {
+	cursor: pointer;
+	display: none;
+	margin-bottom: 10px;
+}
+
+.responsive-menu-icon::before {
+	color: #000;
+	content: "\f333";
+	font: normal 24px/1 'dashicons';
+	margin: 0 auto;
 }

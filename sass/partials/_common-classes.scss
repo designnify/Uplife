@@ -82,6 +82,10 @@
 	font-size: 36px;
 }
 
+h1[itemprop~="headline"] {
+	margin: 0 0 45px;
+}
+
 .entry-title a,
 .sidebar .widget-title a {
 	color: #000;

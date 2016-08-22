@@ -1,0 +1,13 @@
+/* Prices
+--------------------------------------------- */
+table.prices {
+	border: 1px solid #ddd;
+	
+	td {
+		padding: 0 5px;
+	}
+	
+	td:nth-child(2) {
+		text-align: right;
+	}
+}

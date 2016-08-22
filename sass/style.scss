@@ -27,6 +27,7 @@
 		- Objects
 		- Forms
 		- Tables
+		- Contact Form 7
 	- Structure and Layout
 		- Site Containers
 		- Column Widths and Positions
@@ -41,6 +42,8 @@
 		- Home Page Top
 		- News & Blog
 		- Home Page Bottom
+	- Pages
+		- Prices
 	- Plugins
 		- Genesis eNews Extended
 		- Genesis Latest Tweets
@@ -55,6 +58,7 @@
 		- Header Navigation
 		- Primary Navigation
 		- Secondary Navigation
+		- Responsive Menu
 	- Content Area
 		- Entries
 		- Pagination
@@ -106,6 +110,12 @@ Widgets
 Home Page & Home Page Widgets
 ---------------------------------------------------------------------------------------------------- */
 @import "partials/home-page-widgets";
+
+
+/*
+Home Page & Home Page Widgets
+---------------------------------------------------------------------------------------------------- */
+@import "partials/pages";
 
 
 /*
