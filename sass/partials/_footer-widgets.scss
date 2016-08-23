@@ -2,25 +2,6 @@
 	background-color: $color-dark-purple;
 	clear: both;
 	padding: 30px 0;
-/*
-	position: relative;
-	z-index: -100;
-*/
-	
-/*
-	&:before {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		top: 0;
-		right: 20%;
-		bottom: 0;
-		left: 0;
-		background-color: $color-purple;
-		width: 26%;
-		display: block;
-	}
-*/
 	
 	.wrap {
 		display: flex;

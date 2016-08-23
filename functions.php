@@ -32,6 +32,14 @@ add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list'
 //* Add viewport meta tag for mobile browsers
 add_theme_support( 'genesis-responsive-viewport' );
 
+//* Remove the secondary sidebar
+unregister_sidebar( 'sidebar-alt' );
+
+//* Remove layout settings
+genesis_unregister_layout( 'content-sidebar-sidebar' );
+genesis_unregister_layout( 'sidebar-sidebar-content' );
+genesis_unregister_layout( 'sidebar-content-sidebar' );
+
 //* Unregister the header right widget area
 unregister_sidebar( 'header-right' );
 
@@ -63,8 +71,10 @@ function sp_footer_creds_text() {
 }
 
 //* Add new tumbnail image sizes for post excerpts
+/*
 add_image_size( 'homepage-thumbnail', 280, 170, TRUE );
 add_image_size( 'homepage-blog-thumbnail', 280, 280, TRUE );
+*/
 add_image_size( 'post-featured-image-large', 700, 400, TRUE );
 
 //* Remove the entry meta in the entry header and footer
@@ -95,7 +105,7 @@ function featured_post_image() {
 }
 
 //* Add previous and next post links after entry
-add_action( 'genesis_entry_footer', 'genesis_prev_next_post_nav' );
+// add_action( 'genesis_entry_footer', 'genesis_prev_next_post_nav' );
 
 //* Register widget areas 
 genesis_register_sidebar( array(

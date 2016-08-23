@@ -22,6 +22,8 @@
 
 	a:hover,
 	.current-menu-item > a,
+	.sub-menu a:hover,
+	.sub-menu .current-menu-item > a,
 	.sub-menu .current-menu-item > a:hover {
 		background: $color-purple;
 		color: #fff;
@@ -44,7 +46,8 @@
 			border: 1px solid #eee;
 			border-top: 0;
 			font-size: 14px;
-			padding: 20px;
+			height: auto;
+			padding: 20px 6px 10px;
 			position: relative;
 			width: 200px;
 		}

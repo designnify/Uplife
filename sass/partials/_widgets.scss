@@ -39,3 +39,24 @@
 .featured-content .entry-title {
 	font-size: 20px;
 }
+
+/* Offers in Price Page
+--------------------------------------------- */
+.offers {
+	background: $color-purple;
+	box-shadow: 0 0 0 7px rgba(118, 21, 121, .8);
+	padding: 20px;
+	
+	p {
+		margin: 0 0 10px;
+	}
+	
+	p, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+	
+	h2, h3, h4, h5, h6 {
+		border-bottom: 1px solid #fff;
+		width: 500px;
+	}
+}

@@ -43,6 +43,10 @@
 		font-size: 35px;
 	}
 	
+	.panel-grid-cell:first-child {
+		border-right: 1px dotted $color-purple;
+	}
+	
 	.featured-content .entry.category-uutiset,
 	.featured-content .entry.category-news {
 		float: left;
@@ -51,7 +55,9 @@
 	}
 	
 	.featured-content .entry.category-uutiset,
-	.featured-content .entry.category-news {
+	.featured-content .entry.category-news,
+	.featured-content .entry.category-blogi,
+	.featured-content .entry.category-blog {
 		
 		.entry-header {
 			background: $color-dark-purple;

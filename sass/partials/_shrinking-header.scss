@@ -43,12 +43,18 @@
 			height: 60px;
 			padding: 20px 6px 10px;
 		}
+		
+		.sub-menu {
+			a {
+				height: auto;
+			}
+		}
 	}
 }
 
 .shrink .wrap {
 	background-color: rgba(255, 255, 255, 0.1);
-	height: 80px;
+	height: 60px;
 	padding: 0;
 }
 

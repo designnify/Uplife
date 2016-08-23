@@ -36,6 +36,7 @@
 		- Titles
 	- Widgets
 		- Featured Content
+		- Offers in Price Page
 	- Home Page & Home Page Widgets
 		- Home Page Top
 		- News & Blog
@@ -906,6 +907,24 @@ Widgets
 .featured-content .entry-title {
   font-size: 20px; }
 
+/* Offers in Price Page
+--------------------------------------------- */
+/* line 45, sass/partials/_widgets.scss */
+.offers {
+  background: #761579;
+  box-shadow: 0 0 0 7px rgba(118, 21, 121, 0.8);
+  padding: 20px; }
+  /* line 50, sass/partials/_widgets.scss */
+  .offers p {
+    margin: 0 0 10px; }
+  /* line 54, sass/partials/_widgets.scss */
+  .offers p, .offers h2, .offers h3, .offers h4, .offers h5, .offers h6 {
+    color: #fff; }
+  /* line 58, sass/partials/_widgets.scss */
+  .offers h2, .offers h3, .offers h4, .offers h5, .offers h6 {
+    border-bottom: 1px solid #fff;
+    width: 500px; }
+
 /*
 Home Page & Home Page Widgets
 ---------------------------------------------------------------------------------------------------- */
@@ -948,14 +967,19 @@ Home Page & Home Page Widgets
   #news-blog .widget-title {
     font-size: 35px; }
   /* line 46, sass/partials/_home-page-widgets.scss */
+  #news-blog .panel-grid-cell:first-child {
+    border-right: 1px dotted #761579; }
+  /* line 50, sass/partials/_home-page-widgets.scss */
   #news-blog .featured-content .entry.category-uutiset,
   #news-blog .featured-content .entry.category-news {
     float: left;
     margin-right: 6px;
     width: 32%; }
-  /* line 56, sass/partials/_home-page-widgets.scss */
+  /* line 62, sass/partials/_home-page-widgets.scss */
   #news-blog .featured-content .entry.category-uutiset .entry-header,
-  #news-blog .featured-content .entry.category-news .entry-header {
+  #news-blog .featured-content .entry.category-news .entry-header,
+  #news-blog .featured-content .entry.category-blogi .entry-header,
+  #news-blog .featured-content .entry.category-blog .entry-header {
     background: #440C46;
     border: 2px solid #440C46;
     margin-top: -8px;
@@ -965,14 +989,16 @@ Home Page & Home Page Widgets
     -ms-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out; }
-    /* line 67, sass/partials/_home-page-widgets.scss */
+    /* line 73, sass/partials/_home-page-widgets.scss */
     #news-blog .featured-content .entry.category-uutiset .entry-header a,
-    #news-blog .featured-content .entry.category-news .entry-header a {
+    #news-blog .featured-content .entry.category-news .entry-header a,
+    #news-blog .featured-content .entry.category-blogi .entry-header a,
+    #news-blog .featured-content .entry.category-blog .entry-header a {
       color: #fff; }
-  /* line 75, sass/partials/_home-page-widgets.scss */
+  /* line 81, sass/partials/_home-page-widgets.scss */
   #news-blog .featured-content .entry .entry-content {
     padding: 5px; }
-  /* line 79, sass/partials/_home-page-widgets.scss */
+  /* line 85, sass/partials/_home-page-widgets.scss */
   #news-blog .featured-content .entry .more-link {
     background: #761579;
     border: 2px solid #761579;
@@ -980,44 +1006,44 @@ Home Page & Home Page Widgets
     display: block;
     padding: 5px;
     width: 70%; }
-    /* line 87, sass/partials/_home-page-widgets.scss */
+    /* line 93, sass/partials/_home-page-widgets.scss */
     #news-blog .featured-content .entry .more-link:hover {
       background: #fff;
       color: #761579; }
 
 /* Home Page Bottom
 --------------------------------------------- */
-/* line 97, sass/partials/_home-page-widgets.scss */
+/* line 103, sass/partials/_home-page-widgets.scss */
 #homepage-bottom {
   padding: 0 0 30px; }
-  /* line 100, sass/partials/_home-page-widgets.scss */
+  /* line 106, sass/partials/_home-page-widgets.scss */
   #homepage-bottom .widget-title {
     font-size: 25px; }
-  /* line 106, sass/partials/_home-page-widgets.scss */
+  /* line 112, sass/partials/_home-page-widgets.scss */
   #homepage-bottom .enews h5, #homepage-bottom .enews p {
     text-align: center; }
-  /* line 110, sass/partials/_home-page-widgets.scss */
+  /* line 116, sass/partials/_home-page-widgets.scss */
   #homepage-bottom .enews h5 {
     font-size: 24px; }
-  /* line 114, sass/partials/_home-page-widgets.scss */
+  /* line 120, sass/partials/_home-page-widgets.scss */
   #homepage-bottom .enews form {
     background: #232525;
     padding: 10px 10px 0; }
-    /* line 118, sass/partials/_home-page-widgets.scss */
+    /* line 124, sass/partials/_home-page-widgets.scss */
     #homepage-bottom .enews form input {
       width: 75%; }
-    /* line 122, sass/partials/_home-page-widgets.scss */
+    /* line 128, sass/partials/_home-page-widgets.scss */
     #homepage-bottom .enews form input[type="submit"] {
       border-radius: 50%;
       float: right;
       height: 120px;
       padding-left: 16px;
       width: 120px; }
-  /* line 132, sass/partials/_home-page-widgets.scss */
+  /* line 138, sass/partials/_home-page-widgets.scss */
   #homepage-bottom table.events-table {
     line-height: 1.2;
     margin-bottom: 0; }
-    /* line 136, sass/partials/_home-page-widgets.scss */
+    /* line 142, sass/partials/_home-page-widgets.scss */
     #homepage-bottom table.events-table td {
       padding: 0; }
 
@@ -1072,6 +1098,22 @@ Plugins
 .enews form + p {
   margin-top: 24px; }
 
+/* Genesis Simple Share
+--------------------------------------------- */
+/*
+.share-outlined .googlePlus .share,
+.share-outlined .facebook:hover .share,
+.share-outlined .facebook:hover .count {
+	background: $color-purple;
+}
+
+.share-outlined .facebook .share, 
+.share-outlined .facebook .count, 
+.share-outlined .facebook .count:hover {
+	border: 1px solid $color-purple;
+	color: $color-purple;
+}
+*/
 /* Gravity Forms
 --------------------------------------------- */
 /* line 3, sass/partials/_gravity-forms.scss */
@@ -1208,31 +1250,34 @@ Site Header
     .site-header.shrink .genesis-nav-menu a {
       height: 60px;
       padding: 20px 6px 10px; }
-
-/* line 49, sass/partials/_shrinking-header.scss */
-.shrink .wrap {
-  background-color: rgba(255, 255, 255, 0.1);
-  height: 80px;
-  padding: 0; }
+    /* line 48, sass/partials/_shrinking-header.scss */
+    .site-header.shrink .genesis-nav-menu .sub-menu a {
+      height: auto; }
 
 /* line 55, sass/partials/_shrinking-header.scss */
+.shrink .wrap {
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 60px;
+  padding: 0; }
+
+/* line 61, sass/partials/_shrinking-header.scss */
 .shrink .site-title {
   font-size: 20px;
   padding-top: 3px; }
 
-/* line 60, sass/partials/_shrinking-header.scss */
+/* line 66, sass/partials/_shrinking-header.scss */
 .header-image .shrink .site-title {
   padding: 0; }
 
-/* line 64, sass/partials/_shrinking-header.scss */
+/* line 70, sass/partials/_shrinking-header.scss */
 .header-image .shrink .site-title > a {
   height: 80px; }
 
-/* line 68, sass/partials/_shrinking-header.scss */
+/* line 74, sass/partials/_shrinking-header.scss */
 .shrink .site-title a {
   background-size: 80px 80px !important; }
 
-/* line 72, sass/partials/_shrinking-header.scss */
+/* line 78, sass/partials/_shrinking-header.scss */
 .site-header.shrink .widget-area {
   padding-top: 0; }
 
@@ -1242,27 +1287,27 @@ Site Header
   		width: 100%;
   	}
   */
-  /* line 84, sass/partials/_shrinking-header.scss */
+  /* line 90, sass/partials/_shrinking-header.scss */
   .site-header .wrap, .bumper {
     min-height: 172px; }
 
-  /* line 88, sass/partials/_shrinking-header.scss */
+  /* line 94, sass/partials/_shrinking-header.scss */
   .site-header.shrink .wrap {
     min-height: 60px; } }
 @media only screen and (max-width: 768px) {
-  /* line 96, sass/partials/_shrinking-header.scss */
+  /* line 102, sass/partials/_shrinking-header.scss */
   .shrink .site-title {
     font-size: 24px; } }
 @media only screen and (max-width: 600px) {
-  /* line 104, sass/partials/_shrinking-header.scss */
+  /* line 110, sass/partials/_shrinking-header.scss */
   .site-header {
     top: 0; }
 
-  /* line 108, sass/partials/_shrinking-header.scss */
+  /* line 114, sass/partials/_shrinking-header.scss */
   .site-header .wrap, .bumper {
     min-height: 130px; } }
 @media only screen and (max-width: 320px) {
-  /* line 116, sass/partials/_shrinking-header.scss */
+  /* line 122, sass/partials/_shrinking-header.scss */
   .site-header .wrap, .bumper {
     min-height: 190px; } }
 /*
@@ -1290,10 +1335,12 @@ Site Navigation
   /* line 23, sass/partials/_site-navigation.scss */
   .genesis-nav-menu a:hover,
   .genesis-nav-menu .current-menu-item > a,
+  .genesis-nav-menu .sub-menu a:hover,
+  .genesis-nav-menu .sub-menu .current-menu-item > a,
   .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
     background: #761579;
     color: #fff; }
-  /* line 30, sass/partials/_site-navigation.scss */
+  /* line 32, sass/partials/_site-navigation.scss */
   .genesis-nav-menu .sub-menu {
     left: -9999px;
     opacity: 0;
@@ -1305,75 +1352,76 @@ Site Navigation
     transition: opacity .4s ease-in-out;
     width: 200px;
     z-index: 99; }
-    /* line 42, sass/partials/_site-navigation.scss */
+    /* line 44, sass/partials/_site-navigation.scss */
     .genesis-nav-menu .sub-menu a {
       background-color: #fff;
       border: 1px solid #eee;
       border-top: 0;
       font-size: 14px;
-      padding: 20px;
+      height: auto;
+      padding: 20px 6px 10px;
       position: relative;
       width: 200px; }
-    /* line 52, sass/partials/_site-navigation.scss */
+    /* line 55, sass/partials/_site-navigation.scss */
     .genesis-nav-menu .sub-menu .sub-menu {
       margin: -55px 0 0 199px; }
-  /* line 57, sass/partials/_site-navigation.scss */
+  /* line 60, sass/partials/_site-navigation.scss */
   .genesis-nav-menu .menu-item:hover {
     position: static; }
-    /* line 60, sass/partials/_site-navigation.scss */
+    /* line 63, sass/partials/_site-navigation.scss */
     .genesis-nav-menu .menu-item:hover > .sub-menu {
       left: auto;
       opacity: 1; }
-  /* line 66, sass/partials/_site-navigation.scss */
+  /* line 69, sass/partials/_site-navigation.scss */
   .genesis-nav-menu > .first > a {
     padding-left: 0; }
-  /* line 70, sass/partials/_site-navigation.scss */
+  /* line 73, sass/partials/_site-navigation.scss */
   .genesis-nav-menu > .last > a {
     padding-right: 0; }
-  /* line 74, sass/partials/_site-navigation.scss */
+  /* line 77, sass/partials/_site-navigation.scss */
   .genesis-nav-menu > .right {
     color: #fff;
     float: right;
     list-style-type: none;
     padding: 30px 0; }
-  /* line 81, sass/partials/_site-navigation.scss */
+  /* line 84, sass/partials/_site-navigation.scss */
   .genesis-nav-menu > .right > a {
     display: inline;
     padding: 0; }
-  /* line 86, sass/partials/_site-navigation.scss */
+  /* line 89, sass/partials/_site-navigation.scss */
   .genesis-nav-menu > .rss > a {
     margin-left: 48px; }
-  /* line 90, sass/partials/_site-navigation.scss */
+  /* line 93, sass/partials/_site-navigation.scss */
   .genesis-nav-menu > .search {
     padding: 10px 0 0; }
 
 /* Site Header Navigation
 --------------------------------------------- */
-/* line 100, sass/partials/_site-navigation.scss */
+/* line 103, sass/partials/_site-navigation.scss */
 .site-header .sub-menu {
   border-top: 1px solid #eee; }
-  /* line 103, sass/partials/_site-navigation.scss */
+  /* line 106, sass/partials/_site-navigation.scss */
   .site-header .sub-menu .sub-menu {
     margin-top: -56px; }
-/* line 108, sass/partials/_site-navigation.scss */
+/* line 111, sass/partials/_site-navigation.scss */
 .site-header .genesis-nav-menu li li {
   margin-left: 0; }
 
 /* Primary Navigation
 --------------------------------------------- */
-/* line 116, sass/partials/_site-navigation.scss */
+/* line 119, sass/partials/_site-navigation.scss */
 .nav-primary {
   float: right; }
 
 /* Responsive Menu
 --------------------------------------------- */
-/* line 123, sass/partials/_site-navigation.scss */
+/* line 126, sass/partials/_site-navigation.scss */
 .responsive-menu-icon {
   cursor: pointer;
   display: none;
   margin-bottom: 10px; }
 
-/* line 129, sass/partials/_site-navigation.scss */
+/* line 132, sass/partials/_site-navigation.scss */
 .responsive-menu-icon::before {
   color: #000;
   content: "\f333";
@@ -1549,11 +1597,6 @@ li.comment {
   font-size: 16px;
   padding: 24px; }
 
-/* Blog Page Specific*/
-/* line 192, sass/partials/_content-area.scss */
-.page-template-page_blog .entry-content {
-  border-bottom: 1px dotted #761579; }
-
 /*
 Sidebars
 ---------------------------------------------------------------------------------------------------- */
@@ -1572,9 +1615,12 @@ Sidebars
   /* line 15, sass/partials/_sidebars.scss */
   .sidebar .widget {
     background-color: #fff;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: -5px 0px 5px -1px #aaaaaa;
     margin-bottom: 40px;
     padding: 40px; }
+    /* line 21, sass/partials/_sidebars.scss */
+    .sidebar .widget .widget-title {
+      font-size: 35px; }
 
 /*
 Footer Widgets
@@ -1583,79 +1629,61 @@ Footer Widgets
 .footer-widgets {
   background-color: #440C46;
   clear: both;
-  padding: 30px 0;
-  /*
-  	position: relative;
-  	z-index: -100;
-  */
-  /*
-  	&:before {
-  		content: "";
-  		position: absolute;
-  		z-index: -1;
-  		top: 0;
-  		right: 20%;
-  		bottom: 0;
-  		left: 0;
-  		background-color: $color-purple;
-  		width: 26%;
-  		display: block;
-  	}
-  */ }
-  /* line 25, sass/partials/_footer-widgets.scss */
+  padding: 30px 0; }
+  /* line 6, sass/partials/_footer-widgets.scss */
   .footer-widgets .wrap {
     display: flex;
     flex-wrap: wrap; }
-  /* line 30, sass/partials/_footer-widgets.scss */
+  /* line 11, sass/partials/_footer-widgets.scss */
   .footer-widgets,
   .footer-widgets a {
     color: #fff; }
-  /* line 35, sass/partials/_footer-widgets.scss */
+  /* line 16, sass/partials/_footer-widgets.scss */
   .footer-widgets input {
     border: 1px solid #000; }
-  /* line 39, sass/partials/_footer-widgets.scss */
+  /* line 20, sass/partials/_footer-widgets.scss */
   .footer-widgets a.button,
   .footer-widgets a:hover {
     color: #fff; }
-  /* line 44, sass/partials/_footer-widgets.scss */
+  /* line 25, sass/partials/_footer-widgets.scss */
   .footer-widgets li {
     border-bottom: 1px dotted #666;
     margin-bottom: 10px;
     padding-bottom: 10px; }
-  /* line 50, sass/partials/_footer-widgets.scss */
+  /* line 31, sass/partials/_footer-widgets.scss */
   .footer-widgets .widget {
     margin-bottom: 40px; }
-  /* line 54, sass/partials/_footer-widgets.scss */
+  /* line 35, sass/partials/_footer-widgets.scss */
   .footer-widgets p:last-child,
   .footer-widgets ul > li:last-child,
   .footer-widgets .widget:last-child {
     margin-bottom: 0; }
-  /* line 60, sass/partials/_footer-widgets.scss */
+  /* line 41, sass/partials/_footer-widgets.scss */
   .footer-widgets .widget-title {
     font-size: 20px;
     font-weight: bold; }
 
-/* line 66, sass/partials/_footer-widgets.scss */
+/* line 47, sass/partials/_footer-widgets.scss */
 .footer-widgets-1,
 .footer-widgets-2,
 .footer-widgets-3,
 .footer-widgets-4 {
   width: 25%; }
 
-/* line 77, sass/partials/_footer-widgets.scss */
+/* line 58, sass/partials/_footer-widgets.scss */
 .footer-widgets-1,
 .footer-widgets-2,
 .footer-widgets-3,
 .footer-widgets-4 {
   float: left; }
 
-/* line 84, sass/partials/_footer-widgets.scss */
+/* line 65, sass/partials/_footer-widgets.scss */
 .footer-widgets-2,
 .footer-widgets-3,
 .footer-widgets-4 {
   margin-right: 5px;
   width: 24%; }
-  /* line 90, sass/partials/_footer-widgets.scss */
+  /* line 71, sass/partials/_footer-widgets.scss */
   .footer-widgets-2 .widget-title,
   .footer-widgets-3 .widget-title,
   .footer-widgets-4 .widget-title {
@@ -1904,9 +1932,10 @@ Media Queries
 
   /* line 240, sass/partials/_media-queries.scss */
   .genesis-nav-menu.responsive-menu .menu-item-has-children > a {
-    margin-right: 60px; }
+    margin-right: 60px;
+    padding: 13px 0 13px 62px; }
 
-  /* line 244, sass/partials/_media-queries.scss */
+  /* line 245, sass/partials/_media-queries.scss */
   .genesis-nav-menu.responsive-menu > .menu-item-has-children:before {
     content: "\f347";
     float: right;
@@ -1917,15 +1946,15 @@ Media Queries
     text-align: right;
     z-index: 9999; }
 
-  /* line 255, sass/partials/_media-queries.scss */
+  /* line 256, sass/partials/_media-queries.scss */
   .genesis-nav-menu.responsive-menu .menu-open.menu-item-has-children:before {
     content: "\f343"; }
 
-  /* line 259, sass/partials/_media-queries.scss */
+  /* line 260, sass/partials/_media-queries.scss */
   .genesis-nav-menu.responsive-menu > .menu-item > .sub-menu {
     display: none; }
 
-  /* line 263, sass/partials/_media-queries.scss */
+  /* line 264, sass/partials/_media-queries.scss */
   .genesis-nav-menu.responsive-menu .sub-menu {
     background-color: rgba(255, 255, 255, 0.05);
     left: auto;
@@ -1939,13 +1968,13 @@ Media Queries
     width: 100%;
     z-index: 99; }
 
-  /* line 277, sass/partials/_media-queries.scss */
+  /* line 278, sass/partials/_media-queries.scss */
   .genesis-nav-menu.responsive-menu .sub-menu .sub-menu {
     background-color: transparent;
     margin: 0;
     padding-left: 25px; }
 
-  /* line 283, sass/partials/_media-queries.scss */
+  /* line 284, sass/partials/_media-queries.scss */
   .genesis-nav-menu.responsive-menu .sub-menu li a,
   .genesis-nav-menu.responsive-menu .sub-menu li a:hover {
     padding: 10px 0;
@@ -1953,14 +1982,14 @@ Media Queries
     text-transform: none;
     width: 100%; }
 
-  /* line 291, sass/partials/_media-queries.scss */
+  /* line 292, sass/partials/_media-queries.scss */
   .genesis-nav-menu.responsive-menu .current-menu-item > a,
   .genesis-nav-menu.responsive-menu .sub-menu .current-menu-item > a:hover,
   .genesis-nav-menu.responsive-menu > li.menu-item-has-children:hover > a,
   .genesis-nav-menu.responsive-menu a:hover {
     background: none; }
 
-  /* line 298, sass/partials/_media-queries.scss */
+  /* line 299, sass/partials/_media-queries.scss */
   .site-header .genesis-nav-menu.responsive-menu .current-menu-item > a,
   .site-header .genesis-nav-menu.responsive-menu .sub-menu li a,
   .site-header .genesis-nav-menu.responsive-menu .sub-menu li a:hover,
@@ -1971,18 +2000,30 @@ Media Queries
     color: #000; }
 
   /* line 309, sass/partials/_media-queries.scss */
+  .genesis-nav-menu.responsive-menu .current-menu-item > a {
+    background: #761579;
+    color: #fff; }
+
+  /* line 315, sass/partials/_media-queries.scss */
   .site-header.shrink .responsive-menu-icon {
     margin: 14px 0; }
-  /* line 313, sass/partials/_media-queries.scss */
+  /* line 319, sass/partials/_media-queries.scss */
   .site-header.shrink .genesis-nav-menu,
   .site-header.shrink .genesis-nav-menu a {
     height: auto; }
 
-  /* line 320, sass/partials/_media-queries.scss */
+  /* line 326, sass/partials/_media-queries.scss */
+  #news-blog .panel-grid-cell:first-child {
+    border-bottom: 1px dotted #761579;
+    border-right: none; }
+  /* line 333, sass/partials/_media-queries.scss */
   #news-blog .featured-content img {
     width: 100%; }
-  /* line 324, sass/partials/_media-queries.scss */
+  /* line 337, sass/partials/_media-queries.scss */
   #news-blog .featured-content .entry.category-uutiset,
   #news-blog .featured-content .entry.category-news {
     margin-right: 0;
-    width: 100%; } }
+    width: 100%; }
+  /* line 343, sass/partials/_media-queries.scss */
+  #news-blog .featured-content .entry .more-link {
+    width: 150px; } }

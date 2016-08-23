@@ -239,6 +239,7 @@
 
 	.genesis-nav-menu.responsive-menu .menu-item-has-children > a {
 		margin-right: 60px;
+		padding: 13px 0 13px 62px;
 	}
 
 	.genesis-nav-menu.responsive-menu > .menu-item-has-children:before {
@@ -305,6 +306,11 @@
 		color: #000;
 	}
 	
+	.genesis-nav-menu.responsive-menu .current-menu-item > a {
+		background: $color-purple;
+		color: #fff;
+	}
+	
 	.site-header.shrink {
 		.responsive-menu-icon {
 			margin: 14px 0;
@@ -317,14 +323,26 @@
 	}
 	
 	#news-blog {
-		.featured-content img {
-			width: 100%;
+		.panel-grid-cell:first-child {
+			border-bottom: 1px dotted $color-purple;
+			border-right: none;
 		}
 		
-		.featured-content .entry.category-uutiset,
-		.featured-content .entry.category-news {
-			margin-right: 0;
-			width: 100%;
+		.featured-content {
+			
+			img {
+				width: 100%;
+			}
+			
+			.entry.category-uutiset,
+			.entry.category-news {
+				margin-right: 0;
+				width: 100%;
+			}
+			
+			.entry .more-link {
+				width: 150px;
+			}
 		}
 	}
 
